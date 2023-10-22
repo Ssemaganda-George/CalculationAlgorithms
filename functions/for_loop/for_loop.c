@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 int x;
 short *y;
-void functionX (void);
-void functionX (void){
-    unsigned char i, j;
-    for (i = 0; i< 10; i++){
-        for (j = 0; j < 5; j++){
-            int k = 10;
-            x += k +  j;
-        }
-        *y = x*j;
 
+void functionX(void);
+
+void functionX(void) {
+    unsigned char i, j;
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 5; j++) {
+            int k = 10;
+            x += k + j;
+        }
+        *y = x * j;
     }
 }
+
 int main() {
     // Allocate memory for y
     y = (short *)malloc(sizeof(short));
@@ -32,3 +36,4 @@ int main() {
 
     return 0;
 }
+
